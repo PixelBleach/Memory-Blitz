@@ -1,0 +1,33 @@
+"Passive"-Chan : 
+
+Passive chan is the non-conflict version of your personality. She wants to go around capturing tiles not owned by other players and really doesn't like fighting for her things. She's more than happy letting you take her tiles, and will do her best to just stay out of every one elses way. When confronted with another player she'll simply run away. You'll never catch her hitting anyone else. She just wants to be friends with everyone.
+
+Notable Assignment requirements included in her state machine:
+	- Flee From player
+	- Waypoint to Neutral owned Hex
+
+"Aggressive"-Chan : 
+
+Aggressive chan is the full conflict driven version of your personality. She wants to go around capturing tiles owned by other players, and will prioritise fighting them over anything else. She loves hitting people, and getting hit in return so she'll easily drop everything else to just start fighting others. She doesn't care about the territory she does capture, and she'll keep taking tiles from other players until she finds someone to fight. Everyone is fair game in her eyes.
+
+Notable Assignment requirements included in her state machine:
+	- Chase player
+	- Waypoint to other player owned Hex
+	- Stop on hear/see other player, engage in combat
+
+"Defensive"-Chan : 
+
+Defensive chan is a bit of a hoarder. She doesn't care about anything but protecting her own territory. She starts the game taking a set number of tiles. No other priority is given to which tiles she takes as long as she gets a set number. She'll then visciously fight to protect those tiles from any intruder, patrolling between her owned territory untill one tile is lost to another player. 
+
+Notable Assignment requirements included in her state machine:
+	- Patrol Between her owned hexes until one is taken away, putting her under her required capture limit.
+	- Waypoint to "lost" hex if one is taken by other player
+	- Chase and attack anyone on her captured territory. She doesn't care about anyone else
+
+"Dark"-Chan :
+
+Dark chan is the mess of a personality that didn't transfer over very well to computer that captured your mind. Dark chan seemingly does everything without real purpose or pattern behind it. 
+
+Dark chan really just chooses various tasks to accomplish randomly. This way Dark chan will hopefully simulate a player playing the game also. Nothing will be efficient, and Dark has a state machine transition to most other tasks just out of a whim or random variance.
+
+potential feature: dark chan can also teleport randomly or ignore tile wall constraints to simply walk and take whatever the hell it wants to, if it's going to do so.
